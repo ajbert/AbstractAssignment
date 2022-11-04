@@ -14,7 +14,8 @@ namespace MovieSearch.Models
         public string FilePath { get; set; }
         
         public List<T> Search(string searchTitle)
-        {
+        {   
+            
             return MediaList.Where(m => m.Title.Contains(searchTitle, StringComparison.OrdinalIgnoreCase)).ToList();
         }
     }

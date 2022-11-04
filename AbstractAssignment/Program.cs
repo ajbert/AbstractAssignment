@@ -64,6 +64,10 @@ namespace AbstractAssignment
                         results.AddRange(videoFile.Search(searchTitle));
                         results.AddRange(showFile.Search(searchTitle));
 
+                        int searchCount = results.Count();
+
+                        Console.WriteLine($"The search found {searchCount} instances of titles containing {searchTitle}.\n");
+
                         foreach (var item in results) Console.WriteLine(item.Display());
                         break;
 
